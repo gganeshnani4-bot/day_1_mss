@@ -8,4 +8,7 @@
 # print(not(False)) #True 
 
 # print(True and not False) 
-print(age)
+
+
+jkefnwrfbaeDjWFLK
+AJFkw,j,WRDFd;AEF
