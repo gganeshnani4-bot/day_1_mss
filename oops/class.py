@@ -83,12 +83,64 @@
 # print(obj) # self :-- instance of class
 
 
-class A :
-    def __init__(self,v1,v2): # self = instance
-        self.var1 = v1  
-        self.var2 = v2  
-        print("init method") 
+# class A :
+#     def __init__(self,v1,v2): # self = instance
+#         self.var1 = v1  
+#         self.var2 = v2  
+#         print("init method") 
 
-obj=A(10,20) # obj creation  1
-vamsi=A("vamsi","ravi") # obj creation 2 
-ravi=A([1,2,3],{"id":1,"name":"vamsi"}) # obj creation 3
+# obj=A(10,20) # obj creation  1
+# vamsi=A("vamsi","ravi") # obj creation 2 
+# ravi=A([1,2,3],{"id":1,"name":"vamsi"}) # obj creation 3
+
+
+
+
+
+
+
+
+
+
+class BankAccount:
+    bank_name = "State Bank Of India"
+
+    def __init__(self, acc_holder, acc_number, bal):
+
+        self.account_holder = acc_holder
+        self.account_number = acc_number
+        self.balance = bal
+        
+    def deposit(self, amount):
+        self.balance = self.balance + amount
+        print("Deposited:", amount)
+
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance = self.balance - amount
+            print("Withdrawn:", amount)
+        else:
+            print("Insufficient Balance")
+
+    def display_details(self):
+        
+        print("Account Holder:", self.account_holder)
+        print("Account Number:", self.account_number)
+        print("Balance:", self.balance)
+        print("Bank:", BankAccount.bank_name)
+        print("----------------------")
+
+
+account1 = BankAccount("Hemanth", 1001, 10000)
+account2 = BankAccount("Venu Gopal", 1002, 20000)
+
+
+
+
+account1.deposit(5000)
+account1.withdraw(2000)       # Calling Methods
+account1.display_details()
+
+account2.deposit(3000)
+account2.withdraw(5000)         # Calling Methods
+account2.display_details()
